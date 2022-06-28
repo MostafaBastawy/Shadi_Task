@@ -7,6 +7,7 @@ import 'package:shadi_systems_task/modules/home_screen/home_screen.dart';
 import 'package:shadi_systems_task/modules/setting_screen/setting_screen.dart';
 import 'package:shadi_systems_task/shared/components/home_screen/home_screen_app_bar.dart';
 import 'package:shadi_systems_task/shared/components/layout_scren/bottom_sheet_item.dart';
+import 'package:shadi_systems_task/shared/components/setting_screen/setting_screen_app_bar.dart';
 import 'package:shadi_systems_task/shared/styles/colors.dart';
 
 class LayoutScreen extends StatelessWidget {
@@ -24,8 +25,8 @@ class LayoutScreen extends StatelessWidget {
                 child: const HomeScreenAppBar(),
               )
             : PreferredSize(
-                preferredSize: Size(428.w, 200.h),
-                child: const HomeScreenAppBar(),
+                preferredSize: Size(428.w, 100.h),
+                child: const SettingScreenAppBar(),
               ),
         bottomSheet: ClipRRect(
           borderRadius: BorderRadius.only(
