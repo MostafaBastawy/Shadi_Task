@@ -29,25 +29,30 @@ class ProfileScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        GestureDetector(
-                          onTap: () {
-                            language = !language!;
-                            cubit.emit(ProfileRefreshState());
-                          },
-                          child: Icon(
-                            Icons.settings,
-                            color: figma000000,
-                            size: 30,
-                          ),
-                        ),
-                        SizedBox(height: 5.h),
-                        Text(
-                          'Language',
-                          style: TextStyle(
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w400,
-                            color: figma000000,
-                          ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                language = !language!;
+                                cubit.emit(ProfileRefreshState());
+                              },
+                              child: Icon(
+                                Icons.settings,
+                                color: figma000000,
+                                size: 30,
+                              ),
+                            ),
+                            SizedBox(height: 5.h),
+                            Text(
+                              'Language',
+                              style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w400,
+                                color: figma000000,
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(height: 5.h),
                         if (language!)
@@ -113,7 +118,7 @@ class ProfileScreen extends StatelessWidget {
                           ),
                       ],
                     ),
-                    SizedBox(width: 30.w),
+                    language! ? SizedBox(width: 9.w) : SizedBox(width: 30.w),
                     Stack(
                       alignment: AlignmentDirectional.bottomEnd,
                       children: [
@@ -153,6 +158,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 20.h),
               ],
             ),
           ),
