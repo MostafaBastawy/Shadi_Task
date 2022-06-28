@@ -6,6 +6,7 @@ import 'package:shadi_systems_task/cubits/app_cubit/app_cubit.dart';
 import 'package:shadi_systems_task/cubits/app_cubit/bloc_observer.dart';
 import 'package:shadi_systems_task/cubits/authentication_cubit/app_cubit.dart';
 import 'package:shadi_systems_task/cubits/home_cubit/home_cubit.dart';
+import 'package:shadi_systems_task/cubits/setting_cubit/Setting_cubit.dart';
 import 'package:shadi_systems_task/modules/layout_screen.dart';
 import 'package:shadi_systems_task/shared/styles/themes.dart';
 
@@ -40,6 +41,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (BuildContext context) => HomeCubit(),
+        ),
+        BlocProvider(
+          create: (BuildContext context) => SettingCubit(),
         ),
       ],
       child: ScreenUtilInit(
