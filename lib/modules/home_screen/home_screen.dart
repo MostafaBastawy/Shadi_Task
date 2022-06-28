@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                 alignment: AlignmentDirectional.topStart,
                 child: ClipRRect(
                   borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(200.r),
+                    bottomRight: Radius.circular(300.r),
                   ),
                   child: Container(
                     width: 300.w,
@@ -76,11 +76,11 @@ class HomeScreen extends StatelessWidget {
                 alignment: AlignmentDirectional.topStart,
                 child: ClipRRect(
                   borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(200.r),
+                    bottomRight: Radius.circular(300.r),
                   ),
                   child: Container(
                     width: 280.w,
-                    height: 230.h,
+                    height: 200.h,
                     color: figma49BFBE,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -97,6 +97,7 @@ class HomeScreen extends StatelessWidget {
                         SizedBox(width: 10.w),
                         Image.asset(
                           'assets/images/umbrella.png',
+                          fit: BoxFit.fill,
                         ),
                       ],
                     ),
