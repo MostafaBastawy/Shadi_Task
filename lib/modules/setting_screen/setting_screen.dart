@@ -118,12 +118,14 @@ class SettingScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
             SizedBox(height: 30.h),
             GestureDetector(
-              onTap: (){navigateTo(widget: ProfileScreen(), context: context);},
+              onTap: () {
+                navigateTo(widget: ProfileScreen(), context: context);
+              },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 10.w),
                 width: 350.w,
