@@ -4,7 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shadi_systems_task/cubits/app_cubit/app_cubit.dart';
 import 'package:shadi_systems_task/cubits/app_cubit/bloc_observer.dart';
-import 'package:shadi_systems_task/modules/home_screen/home_screen.dart';
+import 'package:shadi_systems_task/cubits/authentication_cubit/app_cubit.dart';
+import 'package:shadi_systems_task/cubits/home_cubit/home_cubit.dart';
+import 'package:shadi_systems_task/modules/layout_screen.dart';
 import 'package:shadi_systems_task/shared/styles/themes.dart';
 
 import 'shared/tools/shared_preference/shared_preference_helper.dart';
@@ -33,6 +35,12 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (BuildContext context) => AppCubit(),
         ),
+        BlocProvider(
+          create: (BuildContext context) => AuthenticationCubit(),
+        ),
+        BlocProvider(
+          create: (BuildContext context) => HomeCubit(),
+        ),
       ],
       child: ScreenUtilInit(
         designSize: const Size(428, 926),
@@ -50,7 +58,7 @@ class MyApp extends StatelessWidget {
           darkTheme: darkTheme,
           themeMode: ThemeMode.light,
           debugShowCheckedModeBanner: false,
-          home: HomeScreen(),
+          home: LayoutScreen(),
         ),
       ),
     );
