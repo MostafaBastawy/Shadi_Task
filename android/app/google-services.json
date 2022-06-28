@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "146102458139",
+    "project_id": "shadisystemtaskapp",
+    "storage_bucket": "shadisystemtaskapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146102458139:android:44337d16b2f477ce4fe5be",
+        "android_client_info": {
+          "package_name": "com.task.shadi_systems_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146102458139-8ehi5h9un8nqpg6ram1vulol81m0n1kk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmK1O1mFzVqq_r-5r0stV3yY3QLypZRWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146102458139-8ehi5h9un8nqpg6ram1vulol81m0n1kk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
