@@ -4,7 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:shadi_systems_task/cubits/setting_cubit/Setting_cubit.dart';
 import 'package:shadi_systems_task/cubits/setting_cubit/setting_states.dart';
+import 'package:shadi_systems_task/modules/profile_screen/profile_screen.dart';
 import 'package:shadi_systems_task/shared/styles/colors.dart';
+import 'package:shadi_systems_task/shared/tools/navigator.dart';
 
 class SettingScreen extends StatelessWidget {
   bool? switchButton;
@@ -120,38 +122,41 @@ class SettingScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 30.h),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 10.w),
-              width: 350.w,
-              height: 50.h,
-              decoration: BoxDecoration(
-                color: figma004E41,
-                borderRadius: BorderRadius.circular(5.r),
-              ),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.person,
-                    color: figmaFFFFFF,
-                    size: 20.0,
-                  ),
-                  SizedBox(width: 10.w),
-                  Text(
-                    'Profile',
-                    style: TextStyle(
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w700,
+            GestureDetector(
+              onTap: (){navigateTo(widget: ProfileScreen(), context: context);},
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 10.w),
+                width: 350.w,
+                height: 50.h,
+                decoration: BoxDecoration(
+                  color: figma004E41,
+                  borderRadius: BorderRadius.circular(5.r),
+                ),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.person,
                       color: figmaFFFFFF,
+                      size: 20.0,
                     ),
-                  ),
-                  const Spacer(),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: figmaFFFFFF,
-                    size: 20.0,
-                  ),
-                  SizedBox(width: 10.w),
-                ],
+                    SizedBox(width: 10.w),
+                    Text(
+                      'Profile',
+                      style: TextStyle(
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w700,
+                        color: figmaFFFFFF,
+                      ),
+                    ),
+                    const Spacer(),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: figmaFFFFFF,
+                      size: 20.0,
+                    ),
+                    SizedBox(width: 10.w),
+                  ],
+                ),
               ),
             )
           ],
