@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 200.h),
+          SizedBox(height: 130.h),
         ],
       ),
     );

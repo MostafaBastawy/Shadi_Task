@@ -32,7 +32,7 @@ class HomeScreenAppBar extends StatelessWidget {
                               image: AssetImage(
                                 'assets/images/profile_image.jpeg',
                               ),
-                              fit: BoxFit.fill,
+                              fit: BoxFit.cover,
                             )),
                       )),
                   Text(
@@ -86,7 +86,7 @@ class HomeScreenAppBar extends StatelessWidget {
                   SizedBox(width: 10.w),
                   Image.asset(
                     'assets/images/umbrella.png',
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                   ),
                 ],
               ),
